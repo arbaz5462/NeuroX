@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Messages</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include("partials/navbar") %>
+
+  <main style="max-width: 900px; margin: 2rem auto;">
+    <h2>Contact Messages</h2>
+    <% if (messages.length === 0) { %>
+      <p>No messages found.</p>
+    <% } else { %>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="text-align: left; border-bottom: 1px solid #ccc;">Name</th>
+            <th style="text-align: left; border-bottom: 1px solid #ccc;">Email</th>
+            <th style="text-align: left; border-bottom: 1px solid #ccc;">Message</th>
+            <th style="text-align: left; border-bottom: 1px solid #ccc;">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% messages.forEach(msg => { %>
+            <tr>
+              <td><%= msg.name %></td>
+              <td><%= msg.email %></td>
+              <td><%= msg.message %></td>
+              <td><%= msg.createdAt.toLocaleString() %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </main>
+
+  <%- include("partials/footer") %>
+</body>
+</html>

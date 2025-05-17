@@ -1,6 +1,17 @@
 {
+  "name": "neurox-ejs-app",
+  "version": "1.0.0",
+  "description": "NeuroX site using HTML, CSS, JS, and EJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
-    "@ibm-watson/assistant-web-chat-react": "^2.0.1",
-    "react-router-dom": "^7.6.0"
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.15.0"
   }
 }

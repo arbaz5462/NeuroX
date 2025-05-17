@@ -1,0 +1,11 @@
+<section id="reviews" class="reviews-section">
+  <h2 class="reviews-title">“Here’s What People Are Saying”</h2>
+  <div class="reviews-grid">
+    <% reviews.forEach(function(review) { %>
+      <div class="review-card">
+        <img src="<%= review.img %>" alt="<%= review.name %> profile" class="review-img" />
+        <p class="review-desc"><%= review.desc %></p>
+      </div>
+    <% }) %>
+  </div>
+</section>
