@@ -1,0 +1,32 @@
+.scroll-nav {
+  position: fixed;
+  top: 30%;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.scroll-nav a.active {
+  color: red;
+  font-weight: bold;
+}
+
+.scroll-nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
